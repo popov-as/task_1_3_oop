@@ -1,5 +1,7 @@
 public class Figure
 {
+    final int PART_COUNT = 8;
+
     private Circle smallCircle;
     private Circle bigCircle;
     private Square square;
@@ -20,15 +22,15 @@ public class Figure
     }
 
     private float getPieArea() {
-        return smallCircle.getArea() / 8;
+        return smallCircle.getArea() / PART_COUNT;
     }
 
     private float getSegmentArea() {
-        return (bigCircle.getArea() - smallCircle.getArea()) / 8;
+        return (bigCircle.getArea() - smallCircle.getArea()) / PART_COUNT;
     }
 
     private float getCornerArea() {
-        return (square.getArea() - bigCircle.getArea()) / 8;
+        return (square.getArea() - bigCircle.getArea()) / PART_COUNT;
     }
 
     public float getArea(int pieCount, int segmentCount, int cornerCount)
