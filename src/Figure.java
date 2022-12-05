@@ -1,6 +1,6 @@
 public class Figure
 {
-    final int PART_COUNT = 8;
+    private final int PART_COUNT = 8;
 
     private Circle smallCircle;
     private Circle bigCircle;
